@@ -1,0 +1,147 @@
+<title>원석연의 이야기</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<style>
+/* 레이아웃: 왼쪽 정렬 한 단. 첫 화면은 이름과 한 줄 소개, 아래로 날짜 라벨이 붙은 이야기 토막이 이어진다. */
+:root {
+  --bg: #F3F6F5;
+  --ink: #15201E;
+  --muted: #566562;
+  --line: #D3DBD9;
+  --accent: #1B5E63;
+  --font-display: "Noto Serif KR", "Nanum Myeongjo", "Apple SD Gothic Neo", serif;
+  --font-body: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0F1716; --ink: #E5ECEA; --muted: #9AA9A6; --line: #26332F; --accent: #7CC6C0;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0F1716; --ink: #E5ECEA; --muted: #9AA9A6; --line: #26332F; --accent: #7CC6C0;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: auto; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0;
+}
+.wrap { max-width: 52rem; margin: 0 auto; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+
+.hero { padding-block: clamp(56px, 12vw, 120px) clamp(48px, 9vw, 88px); }
+.kicker { margin: 0 0 20px; font-size: 13px; letter-spacing: 0.12em; color: var(--muted); }
+.name {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(52px, 13vw, 104px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+.oneliner {
+  margin: clamp(20px, 4vw, 32px) 0 0;
+  max-width: 21em;
+  font-size: clamp(20px, 3.6vw, 28px);
+  font-weight: 500;
+  line-height: 1.5;
+  word-break: keep-all;
+  text-wrap: balance;
+}
+.entry { margin-top: clamp(32px, 6vw, 48px); display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 20px; }
+.entry a {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 2px;
+}
+.entry span { color: var(--muted); font-size: 14px; }
+
+.story { border-top: 1px solid var(--line); padding-bottom: clamp(56px, 10vw, 112px); }
+.beat {
+  display: grid;
+  grid-template-columns: 9.5rem minmax(0, 1fr);
+  gap: 8px 24px;
+  padding-block: 28px;
+  border-bottom: 1px solid var(--line);
+}
+.when {
+  margin: 6px 0 0;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+.beat p {
+  margin: 0;
+  max-width: 36em;
+  font-family: var(--font-display);
+  font-size: 18px;
+  line-height: 1.95;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+@media (max-width: 640px) {
+  .beat { grid-template-columns: minmax(0, 1fr); }
+  .when { margin-top: 0; }
+  .beat p { font-size: 17px; }
+}
+</style>
+
+<div class="wrap">
+  <header class="hero">
+    <p class="kicker">자기소개</p>
+    <h1 class="name">원석연</h1>
+    <p class="oneliner">고난이 닥쳤을 때 상황을 제대로 바라보고 헤쳐 나가며 성장하는 사람</p>
+    <nav class="entry" aria-label="바로가기">
+      <a href="#story">이야기 읽기</a>
+      <span>읽는 시간 약 3분</span>
+    </nav>
+  </header>
+
+  <main id="story" class="story">
+      <section class="beat">
+        <h2 class="when">2000년</h2>
+        <p>두 살이던 2000년, 창원에서 어머니가 나를 버리고 집을 나갔다. 몇 해 뒤 돌아왔지만 두 분은 이혼했다. 나는 그 일을 기억하지 못한다. 대신 아홉, 열 살쯤 어느 오후의 거실이 기억난다. 햇살 속에 먼지가 떠다니는 걸 보다가 문득 생각했다. 나는 남의 기분은 다 읽는데 내 기분은 모르겠다고. 그때부터 나는 부딪히지 않으려고 "알겠어요"라고만 답하는 아이로 자랐다.</p>
+      </section>
+      <section class="beat">
+        <h2 class="when">열네 살 여름</h2>
+        <p>열네 살 여름, 아버지 친구의 딸들이 "싸가지 없다"는 말을 들리게 하고 나갔다. 낯선 사람 앞에서 고개만 끄덕이던 내 모습이 남에게는 그렇게 보인다는 말이었다. 그 말을 듣고 오히려 머리가 번뜩였다. 타인의 눈에 비친 내 모습을 거울처럼 처음 본 것이다. 그날부터 필요한 말은 소리 내어 건네는 연습을 했다. 이 계기로 사교성이 길러지게 되었다.</p>
+      </section>
+      <section class="beat">
+        <h2 class="when">2023년 5월</h2>
+        <p>내 꿈은 편집자였고, 독학으로 공부해 2023년 5월 재택으로 일을 시작했다. 12월 31일에 첫 클라이언트가 생겼다. 그런데 올해 2월, 아버지의 카센터가 문을 닫는다는 이야기를 듣고 내 상황이 보였다. 편집은 클라이언트가 일감을 줘야 생기는 일이라, 끊기는 날에는 내가 할 수 있는 일이 없었다. 그 불안정한 일로는 가족의 바닥을 받칠 수 없다는 생각에 처음으로 "내가 나가서 벌어야겠다"고 마음먹었다. 그러다 IT 국비 교육을 알게 되어 부산까지 직접 가서 상담받고 바로 등록했다. 처음 해 보는 일인데 손이 빨리 움직였고, 국비 수업의 셀프브랜딩 시간에는 내가 사람을 만나는 걸 싫어하는 사람이 아니라 좋아하는 사람이라는 걸 알았다.</p>
+      </section>
+      <section class="beat">
+        <h2 class="when">9월 3일</h2>
+        <p>9월 3일, 강사님에게 취업에 문제없을 거라는 말을 듣고 인생에서 가장 기분이 좋았던 날이었다. 그날 우연히 길에서 만난 사람에게 사주를 듣고, 제사 명목으로 20만 원을 냈다. 판단이 흐트러진 날이었지만 미세한 이질감이 들었고, 다음 날 한 번 더 가 보고 사이비라는 걸 확신해 손을 뗐다. 그곳의 불법건축물과 현금 거래를 근거로 9월 6일 통화를 녹음하며 반만 돌려주겠다는 말에 전액을 요구했고, 9월 7일 20만 원이 전액 돌아왔다.</p>
+      </section>
+      <section class="beat">
+        <h2 class="when">9월 11일</h2>
+        <p>이 일을 계기로 세상을 진실되게 바라보는 눈이 생겼다. 9월 11일 불교를 내세운 사이비를 또 만났고, 내 생각을 이야기하자 "고집 세시죠"라는 말이 돌아왔다. 예전 같으면 기울었을 말이었지만 이번에는 흔들리지 않았다.</p>
+      </section>
+      <section class="beat">
+        <h2 class="when">그 주말</h2>
+        <p>그 일 뒤로 아버지는 매일 전화해 믿지 말라고 걱정했다. 나는 "알겠어요"로 답하다가 그 말로는 걱정을 덜어 줄 수 없다는 걸 알았고, 그 주말 본가에 가서 처음부터 끝까지 내 이야기를 했다. 아버지는 고개를 끄덕이며 "다 그래, 그렇지" 하고 말했다. 내가 어렵게 알아낸 이야기를 아버지는 이미 같은 모양으로 가지고 있었다.</p>
+      </section>
+      <section class="beat">
+        <h2 class="when">지금</h2>
+        <p>돌아보면 나는 고난이 닥칠 때마다 절망하고 무너지기보다 상황을 다르게 보고 한 걸음씩 성장했다. 열네 살에 들은 험한 말은 나를 비춰 주는 거울이 되었고, 카센터가 문을 닫은 일은 내가 나가서 벌겠다고 마음먹는 계기가 되었으며, 사이비에게 속은 일은 세상을 진실되게 바라보는 눈을 갖게 해 주었다. 지금의 나는 적성에 맞는 IT가 재밌고, 처음 해 보는 일 앞에서 설레며, 끝까지 말하는 사람이다.</p>
+      </section>
+  </main>
+</div>
